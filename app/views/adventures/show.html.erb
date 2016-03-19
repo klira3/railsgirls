@@ -5,5 +5,10 @@
   <%= @adventure.name %>
 </p>
 
+<p>
+  <strong>Picture:</strong>
+  <%= image_tag(@adventure.picture_url, :width => 600) if @adventure.picture.present? %>
+</p>
+
 <%= link_to 'Edit', edit_adventure_path(@adventure) %> |
 <%= link_to 'Back', adventures_path %>
